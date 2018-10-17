@@ -1,12 +1,12 @@
 require 'pry'
 class Application
 
-  def call(name)
+  def call(env)
     response = Rack::Response.new
     request = Rack::Request.new(env)
 
     if request.path.match(/items/)
-      binding.pry
+    
     else
       request.write @price
     end
