@@ -7,7 +7,7 @@ class Application
     item_name = request.path.split("/items/").last
     item = Item.items.find {|item| item.name == item_name}
 
-  
+
     if request.path.match("/items/#{item_name}")
       if item.nil?
         response.status = 400
