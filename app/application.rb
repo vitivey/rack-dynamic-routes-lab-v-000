@@ -9,7 +9,7 @@ class Application
     else
       request.write @price
     end
-    
+
   end
 
 end
