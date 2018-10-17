@@ -9,7 +9,8 @@ class Item
     @@items << self
   end
 
-  def items
+  def self.items
     @@items
   end
+
 end
