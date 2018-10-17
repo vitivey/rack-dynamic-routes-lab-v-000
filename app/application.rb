@@ -10,6 +10,8 @@ class Application
       response.write @price
     end
 
+    response.finish
+
   end
 
 end
