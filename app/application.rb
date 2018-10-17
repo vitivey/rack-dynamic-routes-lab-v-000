@@ -14,7 +14,7 @@ class Application
       response.write item.price
     else
       response.status = 404
-      response.write "Route not found"
+      response.write "Item not found"
     end
 
     response.finish
