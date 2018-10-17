@@ -9,7 +9,7 @@ class Application
 
     if item.nil?
       response.status = 400
-      response.write "Item not found"
+      response.write "Route not found"
     elsif request.path.match("/items/#{item_name}")
       response.write item.price
     else
