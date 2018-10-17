@@ -5,7 +5,7 @@ class Application
     request = Rack::Request.new(env)
 
     if request.path.match("/items/#{name}")
-      response.write item.price
+      response.write price
     else
 
       response.write [404, {"Content-Type" => "text/html"}, ["Route not found"]]
