@@ -6,6 +6,7 @@ class Application
 
     item_name = request.path.split("/items/").last
     item = Items.item.find {|item| item.name == item_name}
+
     if request.path.match("/items/#{item_name}")
       response.write item.price
     else
