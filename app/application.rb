@@ -6,7 +6,7 @@ class Application
     request = Rack::Request.new(env)
 
     if request.path.match(/items/)
-      [404]
+      binding.pry
     else
       request.write @price
     end
