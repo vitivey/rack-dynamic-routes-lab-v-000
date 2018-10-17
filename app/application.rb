@@ -8,6 +8,7 @@ class Application
       response.write @price
     else
       [404, {"Content-Type" => "text/html"}, ["Route not found"]]
+      response.write "Route not found"
     end
 
     response.finish
