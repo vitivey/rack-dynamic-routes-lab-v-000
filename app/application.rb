@@ -6,7 +6,7 @@ class Application
 
     item_name = request.path.split("/items/").last
     if request.path.match("/items/#{item_name}")
-      response.write Item::item
+      response.write Item.items
     else
       response.write [404, {"Content-Type" => "text/html"}, ["Route not found"]]
     end
