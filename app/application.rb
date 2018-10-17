@@ -7,7 +7,7 @@ class Application
     if request.path.match(/items/)
       [404]
     else
-      request.write @price
+      response.write @price
     end
 
   end
