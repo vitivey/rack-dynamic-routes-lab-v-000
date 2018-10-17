@@ -8,11 +8,13 @@ class Application
     item = Item.items.find {|item| item.name == item_name}
 
     if item == nil
-      response.write [400, {"Content-Type" => "text/html"}, ["Item not found"]]
+      response.status = 400
+      response.write "Item not found"
     elsif request.path.match("/items/#{item_name}")
       response.write item.price
     else
-      response.write [404, {"Content-Type" => "text/html"}, ["Route not found"]]
+      response.status = 404
+      response.write "Route not found"
     end
 
     response.finish
