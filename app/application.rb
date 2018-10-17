@@ -7,7 +7,7 @@ class Application
     if request.path.match(/items/)
       response.write @price
     else
-      [404, {"Content-Type" => "text/html"}, ["Route not found"]]      
+      [404, {"Content-Type" => "text/html"}, ["Route not found"]]
     end
 
     response.finish
