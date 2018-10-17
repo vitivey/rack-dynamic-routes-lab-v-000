@@ -4,10 +4,10 @@ class Application
     response = Rack::Response.new
     request = Rack::Request.new(env)
 
-    if request.path.match("/items/#{name}")
+    if request.path.match("/items/#{@name}")
       response.write @price
     else
-      
+
       response.write [404, {"Content-Type" => "text/html"}, ["Route not found"]]
     end
 
